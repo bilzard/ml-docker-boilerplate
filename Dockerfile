@@ -9,4 +9,5 @@ RUN pip install -U pip && pip install \
     nb-black \
     jupyterlab_materialdarker
 
-RUN pip freeze >| /ml-docker/working/requirements.lock
+RUN mkdir -p /ml-docker
+RUN pip freeze >| /ml-docker/requirements.lock
