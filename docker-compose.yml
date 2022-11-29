@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+    - jupyter
+    - lab
+    - --ip=0.0.0.0
+    - --allow-root
+    - --no-browser
+    - --collaborative
+    - --config=/ml-docker/jupyter_lab_config.py
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 8888
+      published: "8888"
+      protocol: tcp
+    runtime: nvidia
+    volumes:
+    - type: bind
+      source: ./working
+      target: /ml-docker/working
+      bind:
+        create_host_path: true
+    - type: bind
+      source: ./input
+      target: /ml-docker/input
+      bind:
+        create_host_path: true
+    working_dir: /ml-docker/working
+networks:
+  default:
+    name: ml-docker-boilerplate_default
