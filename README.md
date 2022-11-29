@@ -15,6 +15,8 @@
 
 [^1]: ただし、最初にベースイメージのダウンロードの時間がかかります。
 
+![image](https://user-images.githubusercontent.com/36561962/204465884-5158b326-bf6f-4b86-ac6c-ba1d00e43295.png)
+
 ## 前提知識と必要な資材
 
 Dockerおよびdocker composeを利用しているため、これらの技術に対する運用レベルの知識を前提としています。
