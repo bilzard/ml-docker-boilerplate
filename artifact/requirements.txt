@@ -1,0 +1,5 @@
+fastprogress
+japanize-matplotlib
+nb-black
+jupyterlab_materialdarker
+# add any packages you want
